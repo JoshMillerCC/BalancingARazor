@@ -1,0 +1,24 @@
+﻿@page
+@model BalancingARazor.Pages.TemperatureModel
+@{
+    ViewData["Title"] = "Temperature Conversion";
+}
+
+    <div class="text-center">
+        <h1>Temperature</h1>
+    </div>
+    <div>
+        <form method="post">
+            @Model.convMethod
+            <div>Conversion Method:
+                <select name="TempConvOption">
+                    <option value="1">Fahrenheit to Celcius</option>
+                    <option value="2">Celcius to Fahrenheit</option>
+                </select>
+            </div>
+
+            <div>Enter temperature to convert: <input type="number" name="Temp" required value=""/></div>
+            <input type="submit" />
+            @Model.convTemp
+        </form>
+    </div>

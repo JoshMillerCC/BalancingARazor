@@ -1,0 +1,26 @@
+﻿@page
+@model BalancingARazor.Pages.MassModel
+@{
+    ViewData["Title"] = "Mass";
+}
+
+<div class="text-center">
+    <h1>Mass</h1>
+</div>
+<div>
+    <form method="post">
+        @Model.convMethod
+        <div>Conversion Method: 
+            <select name="MassConvOption">
+                <option value="1">Pounds to Ounces</option>
+                <option value="2">Ounces to Pounds</option>
+                <option value="3">Grams to Pounds</option>
+                <option value="4">Milligrams to Pounds</option>
+            </select>
+        </div>
+        
+        <div>Enter Mass to convert: <input type="number" name="Mass" required value=""/></div>
+        <input type="submit" />
+        @Model.convMass
+    </form>
+</div>
